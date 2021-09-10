@@ -1,0 +1,46 @@
+@use '../abstracts/colors';
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: colors.$dark;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+}
+
+h6 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+}
