@@ -1,0 +1,104 @@
+@use '../abstracts/colors';
+@use '../abstracts/mixins';
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 500;
+  width: 100%;
+  height: 7.2rem;
+  background-color: colors.$dark;
+
+  &__logo {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    z-index: 501;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+
+    @include mixins.breakpoint-down(tablet) {
+      left: 40px;
+    }
+
+    a {
+      display: block;
+      transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+
+      img {
+        height: 5rem;
+
+        @include mixins.breakpoint-down(tablet) {
+          height: 4rem;
+        }
+      }
+    }
+  }
+
+  &__nav-wrap {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    letter-spacing: 0.25rem;
+
+    @include mixins.breakpoint-down(tablet) {
+      right: auto;
+      left: 0;
+      width: 100%;
+      height: auto;
+      padding: 12rem 4rem 2.1rem;
+      // display: none;
+      background-color: colors.$dark;
+    }
+
+    @include mixins.breakpoint-up(desktop) {
+      display: block;
+    }
+  }
+
+  &__nav {
+    height: 7.2rem;
+    margin: 0;
+    display: inline-block;
+
+    @include mixins.breakpoint-down(tablet) {
+      height: auto;
+      margin: 0 0 4.2rem 0;
+      border-top: 1px solid colors.$border;
+      display: block;
+    }
+
+    li {
+      margin-right: 2rem;
+      padding-left: 0;
+      display: inline-block;
+
+      @include mixins.breakpoint-down(tablet) {
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px dotted colors.$border;
+        display: block;
+      }
+
+      a {
+        display: block;
+        line-height: 7.2rem;
+        color: colors.$white;
+
+        @include mixins.breakpoint-down(tablet) {
+          padding: 1.8rem 0;
+          line-height: 1.8rem;
+        }
+      }
+
+      &.current a {
+        color: colors.$teal;
+      }
+    }
+  }
+}

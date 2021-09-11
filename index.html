@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./public/images/logo.svg" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -12,14 +13,26 @@
     rel="stylesheet">
   <link rel="stylesheet" href="./public/css/normalize.css">
   <link rel="stylesheet" href="./public/css/main.css">
-  <link rel="stylesheet" href="./public/css/mobile.css" media="screen and (min-width:20em)">
-  <link rel="stylesheet" href="./public/css/tablet.css" media="screen and (min-width:48em)">
-  <link rel="stylesheet" href="./public/css/desktop.css" media="screen and (min-width:80em)">
   <title>Diego Pascual</title>
 </head>
 
-<body>
+<body id='top'>
+  <header class="header">
+    <div class="header__logo">
+      <a href="/"><img src="./public/images/logo.svg" alt="Logo"></a>
+    </div>
 
+    <nav class="header__nav-wrap">
+      <ul class="header__nav">
+        <li class="current"><a href="#home" class="smoothscroll link">Home</a></li>
+        <li><a href="#about" class="smoothscroll link">About</a></li>
+        <li><a href="#projects" class="smoothscroll link">Projects</a></li>
+        <li><a href="#skills" class="smoothscroll link">Skills</a></li>
+      </ul>
+    </nav>
+
+    <a class="menu-toggle" href="#0"><span>Menu</span></a>
+  </header>
 </body>
 
 </html>

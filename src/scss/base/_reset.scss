@@ -1,6 +1,6 @@
-@use '../abstracts/colors';
-
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -10,22 +10,14 @@ a:hover {
   text-decoration: none;
 }
 
-a {
-  position: relative;
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    left: 50%;
-    height: 3px;
-    background-color: colors.$dark;
-    bottom: 0;
-    transition: all 500ms ease-in;
-  }
-
-  &:hover::before {
-    width: 100%;
-    left: 0;
-  }
+img {
+  width: 100%;
+  height: auto;
 }
