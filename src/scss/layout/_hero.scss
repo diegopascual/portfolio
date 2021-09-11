@@ -1,0 +1,74 @@
+@use '../abstracts/colors';
+@use '../abstracts/mixins';
+
+.hero {
+  min-width: 320px;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 9rem;
+  background-color: colors.$dark;
+
+  @include mixins.breakpoint-up(tablet) {
+    display: grid;
+    place-items: center;
+  }
+
+  @include mixins.breakpoint-up(desktop) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    place-items: start;
+  }
+
+  &__container {
+    @include mixins.breakpoint-up(desktop) {
+      display: grid;
+      grid-template-columns: 3fr 1.5fr;
+      place-items: center;
+    }
+  }
+
+  &__image {
+    width: 70%;
+    margin: 0 auto 2rem;
+
+    @include mixins.breakpoint-up(tablet) {
+      width: 80%;
+    }
+
+    @include mixins.breakpoint-up(desktop) {
+      order: 2;
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    color: colors.$white;
+
+    h1 {
+      margin-bottom: 2rem;
+      color: colors.$teal;
+    }
+
+    h2 {
+      margin-bottom: 3.5rem;
+    }
+  }
+
+  &__social {
+    a {
+      color: colors.$white;
+      transition: color 250ms ease-in;
+
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
+
+      &:hover {
+        color: colors.$teal;
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
 @use '../abstracts/colors';
+@use '../abstracts/mixins';
 
 html {
   font-size: 62.5%;
@@ -9,38 +10,42 @@ body {
   font-size: 1.6rem;
 }
 
-h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
   font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  color: colors.$dark;
+  font-weight: 600;
 }
 
 h1 {
-  font-size: 2.5rem;
-  line-height: 3.25rem;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 5.2rem;
+
+  @include mixins.breakpoint-up(desktop) {
+    font-size: 6rem;
+    line-height: 7.4rem;
+  }
 }
 
 h2 {
-  font-size: 2rem;
-  line-height: 2.5rem;
+  font-size: 3.2rem;
+  line-height: 4rem;
 }
 
 h4 {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
 }
 
 h5 {
-  font-size: 1.25rem;
-  line-height: 1.625rem;
+  font-size: 2rem;
+  line-height: 2.6rem;
 }
 
 h6 {
-  font-size: 1rem;
-  line-height: 1.375rem;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
 }

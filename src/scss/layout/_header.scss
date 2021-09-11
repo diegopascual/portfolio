@@ -57,7 +57,7 @@
     }
 
     @include mixins.breakpoint-up(desktop) {
-      display: block;
+      display: block !important;
     }
   }
 

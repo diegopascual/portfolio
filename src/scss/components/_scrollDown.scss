@@ -1,0 +1,40 @@
+@use '../abstracts/colors';
+@use '../abstracts/mixins';
+
+.home-content__scroll {
+  text-align: center;
+  margin-top: 8rem;
+
+  a {
+    position: relative;
+    padding-right: 2rem;
+    display: inline-block;
+    font-size: 1.1rem;
+    line-height: 3rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    color: colors.$white;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 8px;
+      height: 8px;
+      margin-top: -7px;
+      border-right: 2px solid colors.$teal;
+      border-bottom: 2px solid colors.$teal;
+      display: block;
+      pointer-events: none;
+      transform-origin: 66% 66%;
+      -webkit-transform-origin: 66% 66%;
+      -ms-transform-origin: 66% 66%;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transition: all 0.15s ease-in-out;
+      -webkit-transition: all 0.15s ease-in-out;
+    }
+  }
+}

@@ -1,11 +1,5 @@
 @use '../abstracts/colors';
 
-body {
-  &.noscroll {
-    overflow: hidden;
-  }
-}
-
 .link {
   position: relative;
 
