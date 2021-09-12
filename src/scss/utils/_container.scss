@@ -1,57 +1,17 @@
-@use '../abstracts/mixins';
-
 .container {
   max-width: 120rem;
   margin: 0 auto;
 
-  &--pall {
-    padding-top: 3rem;
-    padding-right: 2rem;
-    padding-bottom: 3rem;
-    padding-left: 2rem;
-
-    @include mixins.breakpoint-up(desktop) {
-      // padding-top: 9.6rem;
-      // padding-bottom: 9.6rem;
-    }
-  }
-
-  &--px {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
   &--py {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-
-    @include mixins.breakpoint-up(desktop) {
-      // padding-top: 9.6rem;
-      // padding-bottom: 9.6rem;
-    }
+    padding-top: 15rem;
+    padding-bottom: 9rem;
   }
 
   &--pt {
-    padding-top: 3rem;
-
-    @include mixins.breakpoint-up(desktop) {
-      // padding-top: 9.6rem;
-    }
-  }
-
-  &--pr {
-    padding-right: 2rem;
+    padding-top: 15rem;
   }
 
   &--pb {
-    padding-bottom: 3rem;
-
-    @include mixins.breakpoint-up(desktop) {
-      // padding-bottom: 9.6rem;
-    }
-  }
-
-  &--pl {
-    padding-left: 2rem;
+    padding-bottom: 9rem;
   }
 }

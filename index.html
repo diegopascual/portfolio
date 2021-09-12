@@ -13,9 +13,13 @@
     rel="stylesheet">
   <link rel="stylesheet" href="./public/css/normalize.css">
   <link rel="stylesheet" href="./public/css/main.css">
-  <script src="./src/js/modernizr.js"></script>
-  <script src="./src/js/pace.min.js"></script>
-  <script src="https://kit.fontawesome.com/ebf8135dc3.js" crossorigin="anonymous"></script>
+  <link rel="preload" as="image" href="./public/images/me.png">
+  <script async src="https://kit.fontawesome.com/ebf8135dc3.js" crossorigin="anonymous"></script>
+  <script defer src="./src/js/modernizr.js"></script>
+  <script defer src="./src/js/pace.min.js"></script>
+  <script src="./src/js/jquery-3.2.1.min.js"></script>
+  <script src="./src/js/plugins.js"></script>
+  <script defer src="./src/js/main.js"></script>
   <title>Diego Pascual</title>
 </head>
 
@@ -30,7 +34,6 @@
         <li class="current"><a href="#home" class="smoothscroll link">Home</a></li>
         <li><a href="#about" class="smoothscroll link">About</a></li>
         <li><a href="#projects" class="smoothscroll link">Projects</a></li>
-        <li><a href="#skills" class="smoothscroll link">Skills</a></li>
       </ul>
     </nav>
 
@@ -38,10 +41,10 @@
   </header>
 
   <main class="main">
-    <section id="home" class="hero">
+    <section id="home" class="hero target-section">
       <div class="hero__container container">
         <figure class="hero__image">
-          <img src="./public/images/me.png" alt="Diego Pascual">
+          <img src="./public/images/me.png" alt="Diego Pascual" loading="lazy">
         </figure>
         <div class="hero__text">
           <h1>Diego Pascual</h1>
@@ -63,6 +66,64 @@
         </a>
       </div>
     </section>
+
+    <section id="about" class="about container--py target-section">
+      <div class="about__narrow">
+        <h2>Me, Myself & I</h2>
+        <p>I'm a self-taught developer from Mexico who likes to code things from scratch, and enjoy bringing ideas to
+          life in the browser.</p>
+        <p>Well-organised person, problem solver, naturally curious and perpetually working on improving my skills. Fan
+          of videogames, TV series, movies, and some sports.</p>
+      </div>
+      <div class="about__grid container">
+        <div class="about__skills dev__sk-in">
+          <h5>Skills</h5>
+          <div class="skills__grid">
+            <figure class="skills__icon">
+              <img src="./public/images/html5.png" alt="HTML" loading="lazy">
+              <figcaption>HTML</figcaption>
+            </figure>
+            <figure class="skills__icon">
+              <img src="./public/images/css3.png" alt="CSS" loading="lazy">
+              <figcaption>CSS</figcaption>
+            </figure>
+            <figure class="skills__icon">
+              <img src="./public/images/javascript.png" alt="JavaScript" loading="lazy">
+              <figcaption>JavaScript</figcaption>
+            </figure>
+            <figure class="skills__icon">
+              <img src="./public/images/git.png" alt="Git" loading="lazy">
+              <figcaption>Git</figcaption>
+            </figure>
+            <figure class="skills__icon">
+              <img src="./public/images/sass.png" alt="Sass" loading="lazy">
+              <figcaption>Sass</figcaption>
+            </figure>
+            <figure class="skills__icon">
+              <img src="./public/images/react.png" alt="React" loading="lazy">
+              <figcaption>React</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="about__interests dev__sk-in">
+          <h5>Interests</h5>
+          <div class="skills__grid">
+            <figure class="skills__icon">
+              <img src="./public/images/typescript.png" alt="TypeScript" loading="lazy">
+              <figcaption>TypeScript</figcaption>
+            </figure>
+            <figure class="skills__icon">
+              <img src="./public/images/vue.png" alt="Vue" loading="lazy">
+              <figcaption>Vue</figcaption>
+            </figure>
+            <figure class="skills__icon">
+              <img src="./public/images/ux-ui.png" alt="UX/UI" loading="lazy">
+              <figcaption>UX/UI</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer"></footer>
@@ -70,10 +131,6 @@
   <div id="preloader">
     <div id="loader"></div>
   </div>
-
-  <script src="./src/js/jquery-3.2.1.min.js"></script>
-  <script src="./src/js/plugins.js"></script>
-  <script src="./src/js/main.js"></script>
 </body>
 
 </html>
