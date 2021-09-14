@@ -3,7 +3,6 @@
 
   var cfg = {
       scrollDuration: 800,
-      mailChimpURL: "",
     },
     $WIN = $(window);
 
