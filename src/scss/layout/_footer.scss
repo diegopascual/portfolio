@@ -3,7 +3,7 @@
 
 .footer {
   padding-top: 5rem;
-  padding-bottom: 3rem;
+  padding-bottom: 4rem;
   background-color: colors.$teal;
   display: flex;
   flex-direction: column;
@@ -13,7 +13,11 @@
     margin-bottom: 3rem;
 
     a {
-      margin: 2rem;
+      margin: 1.5rem;
+
+      @include mixins.breakpoint-up(tablet) {
+        margin: 2rem;
+      }
     }
   }
 }

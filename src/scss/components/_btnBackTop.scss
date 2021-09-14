@@ -1,0 +1,31 @@
+@use '../abstracts/colors';
+
+.go-top {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  z-index: 999;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: colors.$gray;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid colors.$white;
+    border-left: 2px solid colors.$white;
+    border-width: 3px;
+    display: block;
+    transform: translate(-8%, -15%) rotate(45deg);
+    -webkit-transform: translate(-8%, -15%) rotate(45deg);
+    -ms-transform: translate(-8%, -15%) rotate(45deg);
+    transform-origin: top center;
+    -webkit-transform-origin: top center;
+    -ms-transform-origin: top center;
+  }
+}
