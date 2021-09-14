@@ -1,0 +1,14 @@
+@use '../abstracts/colors';
+
+.rounded-icon {
+  padding: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: colors.$white;
+
+  &:hover {
+    background-color: colors.$white;
+    color: colors.$teal;
+  }
+}

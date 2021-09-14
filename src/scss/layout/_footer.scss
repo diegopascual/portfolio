@@ -1,0 +1,19 @@
+@use '../abstracts/colors';
+@use '../abstracts/mixins';
+
+.footer {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  background-color: colors.$teal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__social {
+    margin-bottom: 3rem;
+
+    a {
+      margin: 2rem;
+    }
+  }
+}

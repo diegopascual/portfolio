@@ -87,13 +87,13 @@ h6 {
 }
 .container--py {
   padding-top: 15rem;
-  padding-bottom: 9rem;
+  padding-bottom: 15rem;
 }
 .container--pt {
   padding-top: 15rem;
 }
 .container--pb {
-  padding-bottom: 9rem;
+  padding-bottom: 15rem;
 }
 
 body.noscroll {
@@ -410,6 +410,18 @@ html.no-csstransitions .hero__container {
   transition: 0.45s ease-in-out;
 }
 
+.rounded-icon {
+  padding: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: #ededed;
+}
+.rounded-icon:hover {
+  background-color: #ededed;
+  color: #00aab3;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -680,7 +692,7 @@ html.no-csstransitions .hero__container {
   }
 }
 .projects h2 {
-  margin-bottom: 4.5rem;
+  margin-bottom: 8rem;
   text-align: center;
   color: #00aab3;
 }
@@ -698,6 +710,21 @@ html.no-csstransitions .hero__container {
   .projects__container {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+.footer {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  background-color: #00aab3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__social {
+  margin-bottom: 3rem;
+}
+.footer__social a {
+  margin: 2rem;
 }
 
 /*# sourceMappingURL=main.css.map */
